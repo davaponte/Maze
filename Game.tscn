@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Grid.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GridVisualizer.tscn" type="PackedScene" id=4]
+
+[node name="Game" type="Node2D"]
+
+[node name="Grid" parent="." instance=ExtResource( 2 )]
+
+[node name="GridVisualizer" parent="Grid" instance=ExtResource( 4 )]
