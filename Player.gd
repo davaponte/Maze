@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var direction = Vector2()
 
-const MAX_SPEED = 300
+const MAX_SPEED = 200
 
 var speed = 0
 var velocity = Vector2()
@@ -29,8 +29,7 @@ func _process(delta):
 		direction.y = -1
 	elif Input.is_action_pressed("ui_down"):
 		direction.y = 1
-
-	if Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("ui_left"):
 		direction.x = -1
 	elif Input.is_action_pressed("ui_right"):
 		direction.x = 1
