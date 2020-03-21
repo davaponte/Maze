@@ -35,10 +35,10 @@ func _ready():
 	# Obstacles
 	var positions = []
 	for n in range(len(Blocks)):
-		var Row = n / 4
-		var Col = n % 4
-		var RealRow = Row * 6
-		var RealCol = Col * 8
+		var Row = n / 6
+		var Col = n % 6
+		var RealRow = Row * 5
+		var RealCol = Col * 7
 #		print('Row: ', RealRow, ' Col: ', RealCol)
 		for c in Blocks[n]:
 			for d in c:
@@ -46,8 +46,8 @@ func _ready():
 					var grid_pos = Vector2(RealCol, RealRow)
 					positions.append(grid_pos)
 				RealCol += 1
-				if RealCol % 8 == 0:
-					RealCol = Col * 8
+				if RealCol % 7 == 0:
+					RealCol = Col * 7
 					RealRow += 1
 
 
@@ -102,33 +102,68 @@ func update_child_pos(this_world_pos, direction, type):
 
 func FillBlocks():
 	Blocks.append([])
-	Blocks[0].append('00011000')
-	Blocks[0].append('00100100')
-	Blocks[0].append('01000010')
-	Blocks[0].append('01111110')
-	Blocks[0].append('01000010')
-	Blocks[0].append('01000010')
+	Blocks[0].append('   1   ')
+	Blocks[0].append('  1 1  ')
+	Blocks[0].append(' 1   1 ')
+	Blocks[0].append(' 11111 ')
+	Blocks[0].append(' 1   1 ')
 	Blocks.append([])
-	Blocks[1].append('01111110')
-	Blocks[1].append('01000000')
-	Blocks[1].append('01111100')
-	Blocks[1].append('01000000')
-	Blocks[1].append('01000000')
-	Blocks[1].append('01111110')
+	Blocks[1].append(' 111   ')
+	Blocks[1].append(' 1  1  ')
+	Blocks[1].append(' 1111  ')
+	Blocks[1].append(' 1   1 ')
+	Blocks[1].append(' 11111 ')
 	Blocks.append([])
-	Blocks[2].append('01111100')
-	Blocks[2].append('01000010')
-	Blocks[2].append('01000010')
-	Blocks[2].append('01000010')
-	Blocks[2].append('01000010')
-	Blocks[2].append('01111100')
+	Blocks[2].append(' 11111 ')
+	Blocks[2].append(' 1     ')
+	Blocks[2].append(' 1     ')
+	Blocks[2].append(' 1     ')
+	Blocks[2].append(' 11111 ')
 	Blocks.append([])
-	Blocks[3].append('01000010')
-	Blocks[3].append('01000010')
-	Blocks[3].append('01000010')
-	Blocks[3].append('01111110')
-	Blocks[3].append('01000010')
-	Blocks[3].append('01000010')
+	Blocks[3].append(' 11111 ')
+	Blocks[3].append(' 1    1')
+	Blocks[3].append(' 1    1')
+	Blocks[3].append(' 1    1')
+	Blocks[3].append(' 11111 ')
+	Blocks.append([])
+	Blocks[4].append(' 11111 ')
+	Blocks[4].append(' 1     ')
+	Blocks[4].append(' 1111  ')
+	Blocks[4].append(' 1     ')
+	Blocks[4].append(' 11111 ')
+	Blocks.append([])
+	Blocks[5].append(' 11111 ')
+	Blocks[5].append(' 1     ')
+	Blocks[5].append(' 1111  ')
+	Blocks[5].append(' 1     ')
+	Blocks[5].append(' 1     ')
+#	Blocks.append([])
+#	Blocks[6].append(' 11111 ')
+#	Blocks[6].append(' 1     ')
+#	Blocks[6].append(' 1  11 ')
+#	Blocks[6].append(' 1   1 ')
+#	Blocks[6].append(' 11111 ')
+#	Blocks.append([])
+#	Blocks[1].append('01111110')
+#	Blocks[1].append('01000000')
+#	Blocks[1].append('01111100')
+#	Blocks[1].append('01000000')
+#	Blocks[1].append('01000000')
+#	Blocks[1].append('01111110')
+#	Blocks.append([])
+#	Blocks[2].append('01111100')
+#	Blocks[2].append('01000010')
+#	Blocks[2].append('01000010')
+#	Blocks[2].append('01000010')
+#	Blocks[2].append('01000010')
+#	Blocks[2].append('01111100')
+#	Blocks.append([])
+#	Blocks[3].append('01000010')
+#	Blocks[3].append('01000010')
+#	Blocks[3].append('01000010')
+#	Blocks[3].append('01111110')
+#	Blocks[3].append('01000010')
+#	Blocks[3].append('01000010')
 #
 #	Blocks.append([])
 #	Blocks[0].append('00000000')
