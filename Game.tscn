@@ -6,6 +6,5 @@
 [node name="Game" type="Node2D"]
 
 [node name="Grid" parent="." instance=ExtResource( 2 )]
-cell_size = Vector2( 24, 24 )
 
 [node name="GridVisualizer" parent="Grid" instance=ExtResource( 4 )]
