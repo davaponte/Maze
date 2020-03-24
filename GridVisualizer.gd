@@ -15,7 +15,7 @@ func _draw():
 		var col_pos = x * grid.cell_size.x
 		var limit = grid.grid_size.y * grid.cell_size.y
 		draw_line(Vector2(col_pos, 0), Vector2(col_pos, limit), LINE_COLOR, LINE_WIDTH)
-		
+
 	#for y in range(grid.cell_quadrant_size + 1):
 	for y in range(grid.grid_size.y + 1):
 		var row_pos = y * grid.cell_size.y
