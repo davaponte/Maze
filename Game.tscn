@@ -5,6 +5,14 @@
 
 [node name="Game" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0.247059, 0.333333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Grid" parent="." instance=ExtResource( 2 )]
 
 [node name="GridVisualizer" parent="Grid" instance=ExtResource( 4 )]
